@@ -182,6 +182,8 @@ class NN:
         self.w_in = self.w_in - self.rate * dEwi
         self.w_out = self.w_out - self.rate * dEwo
 
+
+        
     def train_rounds(self, train_x, train_y, num_rounds):    
         # iterate as long as we're told
         # For each epoch, it would be helpful to print the total "loss" -- the error
@@ -189,7 +191,7 @@ class NN:
         # Often, one might choose a loss threshold (say, < 0.0001) and simply train until
         # the loss is smaller
         for i in range(1,num_rounds+1):
-            #print(f"Itteration i: {i}")
+            print(f"Itteration i: {i}")
             # iterate each data point
             loss = 0
             for j in range(0,train_x.shape[0]):
