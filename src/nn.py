@@ -78,6 +78,7 @@ class NN:
 
     # Use the standard sigmoid function. Another option is arctan, etc.
     def sigmoid(self, arr):
+        arr.astype('float128')
         return 1/(1+np.exp(-1*arr))
 
     # The derivative of the sigmoid function.
